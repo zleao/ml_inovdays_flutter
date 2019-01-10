@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'tweet.dart';
+import 'dart:math';
 
 class ListViewTweets extends StatelessWidget {
   final List<Tweet> tweets;
@@ -25,7 +26,7 @@ class ListViewTweets extends StatelessWidget {
                     ),
                   ),
                   subtitle: Text(
-                    '${tweets[position].message.substring(0, 50)}...',
+                    '${tweets[position].message.substring(0, min(tweets[position].message.length, 50))}...',
                     style: new TextStyle(
                       fontSize: 15.0,
                       fontStyle: FontStyle.italic,
