@@ -14,9 +14,9 @@ class TabBarDemo extends StatelessWidget {
           appBar: AppBar(
             bottom: TabBar(
               tabs: [
-                Tab(icon: Icon(Icons.directions_car)),
-                Tab(icon: Icon(Icons.directions_transit)),
-                Tab(icon: Icon(Icons.directions_bike)),
+                Tab(icon: new Image.asset("images/tab_twitter.png"), text: "Twitter"),
+                Tab(icon: new Image.asset("images/tab_weather.png"), text: "Weather"),
+                Tab(icon: new Image.asset("images/tab_authentication.png"), text: "Authentication"),
               ],
             ),
             title: Text('Tabs Demo'),
