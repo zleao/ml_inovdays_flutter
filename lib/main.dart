@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'tweets_page.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(TabBarDemo());
@@ -23,9 +25,9 @@ class TabBarDemo extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              Icon(Icons.directions_car),
-              Icon(Icons.directions_transit),
-              Icon(Icons.directions_bike),
+              TweetsPage(tweets: fetchPosts(http.Client())),
+              new Image.asset("images/tab_weather.png"),
+              new Image.asset("images/tab_authentication.png"),
             ],
           ),
         ),
